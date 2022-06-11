@@ -30,11 +30,11 @@ As an adventurer, you take part in the discovery of these ancient relics and pur
 
 <div align="center">
   <div style="display: flex;">
-    <img src="https://user-images.githubusercontent.com/88238718/173015529-fd101d6b-2e82-4b6d-94f2-97a6249dae22.png" width="450" height="450" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173015551-f29b539f-57ee-42fc-8da3-5d1b798b3164.png" width="450" height="450" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173015548-c5003f1f-779b-4a55-acb1-394bb95f56d1.png" width="450" height="450" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173015536-001e8435-d1d4-439c-a586-9644f40f2580.png" width="450" height="450" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173015545-76ad48e3-263f-4450-83d3-776178a2b8f6.png" width="450" height="450" style="vertical-align: top;">
+    <img src="https://user-images.githubusercontent.com/88238718/173015529-fd101d6b-2e82-4b6d-94f2-97a6249dae22.png" width="350" height="450" style="vertical-align: top;">
+    <img src="https://user-images.githubusercontent.com/88238718/173015551-f29b539f-57ee-42fc-8da3-5d1b798b3164.png" width="350" height="450" style="vertical-align: top;">
+    <img src="https://user-images.githubusercontent.com/88238718/173015548-c5003f1f-779b-4a55-acb1-394bb95f56d1.png" width="350" height="450" style="vertical-align: top;">
+    <img src="https://user-images.githubusercontent.com/88238718/173015536-001e8435-d1d4-439c-a586-9644f40f2580.png" width="350" height="450" style="vertical-align: top;">
+    <img src="https://user-images.githubusercontent.com/88238718/173015545-76ad48e3-263f-4450-83d3-776178a2b8f6.png" width="350" height="450" style="vertical-align: top;">
   </div> 
 </div>
 
