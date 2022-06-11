@@ -44,7 +44,9 @@ As an adventurer, you take part in the discovery of these ancient relics and pur
   <img src="https://user-images.githubusercontent.com/88238718/173021026-ef43ff23-eee9-434c-a3d5-0e874bd32919.png" width="450" height="450" style="vertical-align: top;">
     <br>
     <br>
-    <p>This plugin is high configurable in terms of drop rates, where do the relics drop (blocks or in mobs) and the amount of piglin rewards you receive from a successfull barter per each relic. You can add additional item drop rewards or where to drop relic in the fields or remove them at your own disposal. Item rewards support slimefun and vanilla items using the appropriate item ID. You can also generate random config templates by deleting the relic-settings.yml file.</p>
+    <p>This plugin is high configurable in terms of drop rates, where do the relics drop (blocks or in mobs) and the amount of piglin rewards you receive from a successfull barter per each relic. You can add additional item drop rewards or where to drop relic in the fields or remove them at your own disposal. Item rewards support slimefun and vanilla items using the appropriate item ID. 
+      
+      You can also generate random config templates by deleting the relic-settings.yml file.</p>
 </div>
 
 ## :label: Credits
