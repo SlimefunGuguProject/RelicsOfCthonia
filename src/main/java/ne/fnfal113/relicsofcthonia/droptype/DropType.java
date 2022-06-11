@@ -8,7 +8,7 @@ import org.bukkit.NamespacedKey;
 public class DropType {
 
     public static final RecipeType DROP_TYPE = new RecipeType(
-            new NamespacedKey(RelicsOfCthonia.getInstance(), "relic_drop_type_mining"),
+            new NamespacedKey(RelicsOfCthonia.getInstance(), "relic_drop_type_generic"),
             RelicItems.RELIC_DROP_TYPE
     );
 
