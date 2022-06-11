@@ -8,7 +8,7 @@ An entry for slimefun addon jam 2022 which started from june 3 to 13.
 ## :sparkler: Lore
 In the middle earth, the lands of Cthonia where rich civilization exist since the dawn of aether has been brought down to its knees through centuries of war against the gods of oblivion. 
 
-Cthonia fell into the hands of the dark, it was succumbed slowly transforming the radiant lands to dire biome (nether) leaving a scattered waste lands with dark entities who were dammed during the war. As centuries past by cthonian relics are widely scattered in the waste lands waiting to be unearthed from the ground and looted from dark mobs. 
+Cthonia fell into the hands of the dark, it was succumbed slowly transforming the radiant lands to dire biome (nether) leaving a scattered waste lands with dark entities who were dammed during the war. As centuries past by, cthonian relics are widely scattered in the waste lands waiting to be unearthed from the ground and looted from dark mobs. 
 
 As an adventurer, you take part in the discovery of these ancient relics and pursue the fortune that lies beyond.
 
