@@ -70,7 +70,7 @@ public final class RelicsOfCthonia extends JavaPlugin implements SlimefunAddon {
     @Nullable
     @Override
     public String getBugTrackerURL() {
-        return null;
+        return "https://github.com/FN-FAL113/RelicsOfCthonia/issues";
     }
 
     private static void setInstance(RelicsOfCthonia ins) {
