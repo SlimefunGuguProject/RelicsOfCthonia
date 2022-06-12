@@ -1,6 +1,7 @@
 package ne.fnfal113.relicsofcthonia;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 import ne.fnfal113.relicsofcthonia.config.ConfigManager;
 import ne.fnfal113.relicsofcthonia.items.RelicsItemSetup;
 import ne.fnfal113.relicsofcthonia.listeners.MiningListener;
@@ -40,6 +41,10 @@ public final class RelicsOfCthonia extends JavaPlugin implements SlimefunAddon {
         RelicsItemSetup.INSTANCE.init();
 
         registerEvents();
+
+        if (getConfig().getBoolean("auto-update", true) && getDescription().getVersion().startsWith("DEV - ")) {
+            new GitHubBuildsUpdater(this, getFile(), "FN-FAL113/RelicsOfCthonia/main").start();
+        }
 
     }
 
