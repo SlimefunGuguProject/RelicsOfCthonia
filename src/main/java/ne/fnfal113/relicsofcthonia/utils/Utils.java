@@ -26,7 +26,7 @@ public class Utils {
     }
 
     public static void sendRelicMessage(String message, LivingEntity livingEntity){
-        livingEntity.sendMessage(colorTranslator("&6[RelicsOfCthonia] > " + message));
+        livingEntity.sendMessage(colorTranslator("&6[克苏尼亚遗物] > " + message));
     }
 
     // set or update the given string to replace with the given config section

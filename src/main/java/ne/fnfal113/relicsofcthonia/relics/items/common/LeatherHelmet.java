@@ -27,7 +27,7 @@ public class LeatherHelmet extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eThis leather helmet cannot be used anymore, trade it instead!", player);
+        Utils.sendRelicMessage("&e这件皮革头盔不能再使用了, 最好把它出售!", player);
     }
 
 }

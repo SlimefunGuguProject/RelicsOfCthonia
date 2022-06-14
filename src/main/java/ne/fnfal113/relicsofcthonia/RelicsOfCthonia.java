@@ -1,13 +1,13 @@
 package ne.fnfal113.relicsofcthonia;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 import ne.fnfal113.relicsofcthonia.config.ConfigManager;
 import ne.fnfal113.relicsofcthonia.items.RelicsItemSetup;
 import ne.fnfal113.relicsofcthonia.listeners.MiningListener;
 import ne.fnfal113.relicsofcthonia.listeners.MobKillListener;
 import ne.fnfal113.relicsofcthonia.listeners.OffHandClickListener;
 import ne.fnfal113.relicsofcthonia.listeners.PiglinMainListener;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -42,8 +42,8 @@ public final class RelicsOfCthonia extends JavaPlugin implements SlimefunAddon {
 
         registerEvents();
 
-        if (getConfig().getBoolean("auto-update", true) && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "FN-FAL113/RelicsOfCthonia/main").start();
+        if (getConfig().getBoolean("auto-update", true) && getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "RelicsOfCthonia", "main", false, "zh-CN").start();
         }
 
     }
