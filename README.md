@@ -12,6 +12,10 @@ Cthonia fell into the hands of the dark, it was succumbed slowly transforming th
 
 As an adventurer, you take part in the discovery of these ancient relics and pursue the fortune that lies beyond.
 
+## :arrow_down: Download from build page with auto updates
+### [Download Official Jar](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main/)
+[![Build Status](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main/badge.svg)](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main)
+
 ## 💫 Categories
 <div align="center">
   <div style="display: flex;">
