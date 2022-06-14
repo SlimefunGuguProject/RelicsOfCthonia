@@ -27,7 +27,7 @@ public class FishingSack extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eFishing sack cannot store any fish anymore, trade it instead!", player);
+        Utils.sendRelicMessage("&e钓鱼袋不能再存放任何鱼了, 最好把它出售!", player);
     }
 
 }

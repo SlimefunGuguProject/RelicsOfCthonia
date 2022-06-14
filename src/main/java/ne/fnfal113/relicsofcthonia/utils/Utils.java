@@ -1,7 +1,12 @@
 package ne.fnfal113.relicsofcthonia.utils;
 
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import ne.fnfal113.relicsofcthonia.RelicsOfCthonia;
 import ne.fnfal113.relicsofcthonia.config.ConfigManager;
+import net.guizhanss.guizhanlib.minecraft.helper.MaterialHelper;
+import net.guizhanss.guizhanlib.minecraft.helper.entity.EntityTypeHelper;
+import net.guizhanss.relicsofcthonia.handlers.RelicLoreHandler;
+import net.guizhanss.relicsofcthonia.types.LoreType;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
@@ -86,7 +91,28 @@ public class Utils {
 
     // loops the provided list of string and appends them on the designated index
     // based on the string that will be replaced, but instead it is used as the index
-    public static void addLoreByStringList(@Nonnull ItemStack itemStack, String section, String settings, String stringToReplace, String color, String prefix, String suffix){
+    public static void addLoreByStringList(@Nonnull ItemStack itemStack, String section, String settings, String stringToReplace, String color, String prefix, String suffix, LoreType loreType){
+        addLoreByStringList(itemStack, section, settings, stringToReplace, color, prefix, suffix, loreType,
+            (value, type) -> {
+                switch (type) {
+                    case MATERIAL:
+                        SlimefunItem sfItem = SlimefunItem.getById(value);
+                        if (sfItem != null) {
+                            return sfItem.getItemName();
+                        } else {
+                            return MaterialHelper.getName(value);
+                        }
+                    case ENTITY_TYPE:
+                        return EntityTypeHelper.getName(value.toUpperCase());
+                    default:
+                        return value.replace("_", " ").toLowerCase();
+                }
+            });
+    }
+
+    // loops the provided list of string and appends them on the designated index
+    // based on the string that will be replaced, but instead it is used as the index
+    private static void addLoreByStringList(@Nonnull ItemStack itemStack, String section, String settings, String stringToReplace, String color, String prefix, String suffix, LoreType loreType, RelicLoreHandler handler){
         ConfigManager configManager = RelicsOfCthonia.getInstance().getConfigManager();
         ItemMeta meta = itemStack.getItemMeta();
         List<String> lore = meta.getLore();
@@ -103,7 +129,7 @@ public class Utils {
             String value = configManager.getStringListById(section, settings).get(x);
 
             if(!value.isEmpty()) {
-                lore.add(j + 1, Utils.colorTranslator(color + prefix + value.replace("_", " ").toLowerCase()));
+                lore.add(j + 1, Utils.colorTranslator(color + prefix + handler.handle(value, loreType) + suffix));
             }
         }
 

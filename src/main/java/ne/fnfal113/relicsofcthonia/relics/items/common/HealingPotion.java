@@ -34,11 +34,11 @@ public class HealingPotion extends AbstractRelic {
         if(player.getHealth() <= currentMaxHealth - 2){
             consumeRelic(itemInOffhand);
             player.setHealth(player.getHealth() + 2);
-            Utils.sendRelicMessage("&e2 points of health are added to you after using the healing potion!", player);
+            Utils.sendRelicMessage("&e使用治疗药水后你恢复了2点生命值!", player);
 
             return;
         }
 
-        Utils.sendRelicMessage("&cHealing potion cannot be used on your current health!", player);
+        Utils.sendRelicMessage("&c你当前血量不允许使用治疗药水!", player);
     }
 }

@@ -38,7 +38,7 @@ public class CthonianPearl extends AbstractRelic {
         consumeRelic(itemInOffhand);
 
         player.teleport(block.getLocation());
-        Utils.sendRelicMessage("&eYou have been teleported to your target location using Cthonian Pearl", player);
+        Utils.sendRelicMessage("&e你使用克苏尼亚珍珠传送到了看向的方块上!", player);
     }
 
 }
