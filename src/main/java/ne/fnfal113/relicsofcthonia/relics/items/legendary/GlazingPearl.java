@@ -27,7 +27,7 @@ public class GlazingPearl extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eGlazing pearl?! I better find a piglin trader to check what I can get from this.", player);
+        Utils.sendRelicMessage("&e琉璃珍珠?! 我最好找到猪灵, 看看我能用它换到什么.", player);
     }
 
 }

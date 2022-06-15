@@ -39,7 +39,7 @@ public class EyeOfSauron extends AbstractRelic {
                 int z = (int) player.getLocation().getZ();
 
                 playerList.add((Player) en);
-                Utils.sendRelicMessage("&eEye of Sauron found a nearby player named " + player.getName() + " at x: " + x + " y: " + y + " z: " + z, player);
+                Utils.sendRelicMessage("&e索伦之眼找到了一个附近的玩家: " + player.getName() + " 位于 x: " + x + " y: " + y + " z: " + z, player);
             }
         }
 

@@ -27,6 +27,6 @@ public class SapphireRing extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eWhat a precious stone this ring have, piglin traders want this so bad.", player);
+        Utils.sendRelicMessage("&e这枚戒指上有珍贵的宝石, 我猜猪灵一定非常想要获得它们.", player);
     }
 }
