@@ -38,6 +38,6 @@ public class ThunderInABottle extends AbstractRelic {
         consumeRelic(itemInOffhand);
 
         player.getWorld().strikeLightning(block.getLocation());
-        Utils.sendRelicMessage("&eYou have summoned a lightning on the target location!", player);
+        Utils.sendRelicMessage("&e你召唤了闪电!", player);
     }
 }

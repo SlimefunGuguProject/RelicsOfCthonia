@@ -5,7 +5,7 @@ import ne.fnfal113.relicsofcthonia.RelicsOfCthonia;
 import ne.fnfal113.relicsofcthonia.config.ConfigManager;
 import net.guizhanss.guizhanlib.minecraft.helper.MaterialHelper;
 import net.guizhanss.guizhanlib.minecraft.helper.entity.EntityTypeHelper;
-import net.guizhanss.relicsofcthonia.handlers.RelicLoreHandler;
+import net.guizhanss.guizhanlib.utils.StringUtil;
 import net.guizhanss.relicsofcthonia.types.LoreType;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Bukkit;
@@ -18,8 +18,22 @@ import org.bukkit.scheduler.BukkitTask;
 import javax.annotation.Nonnull;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Utils {
+
+    private static final Function<String, String> materialLoreHandler = (value) -> {
+        SlimefunItem sfItem = SlimefunItem.getById(value);
+        if (sfItem != null) {
+            return sfItem.getItemName();
+        } else {
+            return MaterialHelper.getName(value);
+        }
+    };
+    private static final Function<String, String> entityTypeLoreHandler = (value) ->
+        EntityTypeHelper.getName(StringUtil.dehumanize(value));
+    private static final Function<String, String> defaultLoreHandler = (value) ->
+        value.replace("_", " ").toLowerCase();
 
     public static String colorTranslator(String strings){
         return ChatColor.translateAlternateColorCodes('&', strings);
@@ -89,30 +103,25 @@ public class Utils {
         itemStack.setItemMeta(meta);
     }
 
-    // loops the provided list of string and appends them on the designated index
-    // based on the string that will be replaced, but instead it is used as the index
+    // 对 lore 中显示的物品进行汉化
     public static void addLoreByStringList(@Nonnull ItemStack itemStack, String section, String settings, String stringToReplace, String color, String prefix, String suffix, LoreType loreType){
-        addLoreByStringList(itemStack, section, settings, stringToReplace, color, prefix, suffix, loreType,
-            (value, type) -> {
-                switch (type) {
-                    case MATERIAL:
-                        SlimefunItem sfItem = SlimefunItem.getById(value);
-                        if (sfItem != null) {
-                            return sfItem.getItemName();
-                        } else {
-                            return MaterialHelper.getName(value);
-                        }
-                    case ENTITY_TYPE:
-                        return EntityTypeHelper.getName(value.toUpperCase());
-                    default:
-                        return value.replace("_", " ").toLowerCase();
-                }
-            });
+        Function<String, String> loreHandler;
+        switch (loreType) {
+            case MATERIAL:
+                loreHandler = materialLoreHandler;
+                break;
+            case ENTITY_TYPE:
+                loreHandler = entityTypeLoreHandler;
+                break;
+            default:
+                loreHandler = defaultLoreHandler;
+        }
+        addLoreByStringList(itemStack, section, settings, stringToReplace, color, prefix, suffix, loreHandler);
     }
 
     // loops the provided list of string and appends them on the designated index
     // based on the string that will be replaced, but instead it is used as the index
-    private static void addLoreByStringList(@Nonnull ItemStack itemStack, String section, String settings, String stringToReplace, String color, String prefix, String suffix, LoreType loreType, RelicLoreHandler handler){
+    private static void addLoreByStringList(@Nonnull ItemStack itemStack, String section, String settings, String stringToReplace, String color, String prefix, String suffix, Function<String, String> handler){
         ConfigManager configManager = RelicsOfCthonia.getInstance().getConfigManager();
         ItemMeta meta = itemStack.getItemMeta();
         List<String> lore = meta.getLore();
@@ -129,7 +138,7 @@ public class Utils {
             String value = configManager.getStringListById(section, settings).get(x);
 
             if(!value.isEmpty()) {
-                lore.add(j + 1, Utils.colorTranslator(color + prefix + handler.handle(value, loreType) + suffix));
+                lore.add(j + 1, Utils.colorTranslator(color + prefix + handler.apply(value) + suffix));
             }
         }
 

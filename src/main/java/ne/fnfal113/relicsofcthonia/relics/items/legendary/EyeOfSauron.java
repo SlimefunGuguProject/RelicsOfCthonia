@@ -44,7 +44,7 @@ public class EyeOfSauron extends AbstractRelic {
         }
 
         if(playerList.isEmpty()){
-            Utils.sendRelicMessage("&eEye of sauron is not able to find any nearby players!", player);
+            Utils.sendRelicMessage("&e索伦之眼没有找到附近的玩家!", player);
         }
 
         consumeRelic(itemInOffhand);
