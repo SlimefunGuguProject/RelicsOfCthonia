@@ -7,11 +7,13 @@
 该附属为2022年粘液科技附属竞赛参赛作品。
 
 ## :sparkler: 背景
-In the middle earth, the lands of Cthonia where rich civilization exist since the dawn of aether has been brought down to its knees through centuries of war against the gods of oblivion. 
 
-Cthonia fell into the hands of the dark, it was succumbed slowly transforming the radiant lands to dire biome (nether) leaving a scattered waste lands with dark entities who were dammed during the war. As centuries past by, cthonian relics are widely scattered in the waste lands waiting to be unearthed from the ground and looted from dark mobs. 
+在中土世界，克苏尼亚的土地上，自从以太诞生之时就存在着繁荣的文明。但经过数年与遗忘之神的交战，克苏尼亚陷落了。
 
-As an adventurer, you take part in the discovery of these ancient relics and pursue the fortune that lies beyond.
+克苏尼亚陷入了黑暗，它似乎屈从于黑暗的淫威，将曾经光芒四射的下界区域转变成如今阴森恐怖的群落，留下零星的废墟与数不清的尸骨。  
+几个世纪过去了，克苏尼亚的遗物散落在废土中，等待人们挖掘出来。它们似乎还很受黑暗地区部分生物的欢迎。
+
+作为一名冒险家，你将参与发掘这些古老的遗物，并追求其中的财富。
 
 ## 💫 分类
 
