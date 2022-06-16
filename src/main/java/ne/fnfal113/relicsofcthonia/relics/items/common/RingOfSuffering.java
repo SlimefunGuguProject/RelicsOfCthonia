@@ -33,7 +33,7 @@ public class RingOfSuffering extends AbstractRelic {
             consumeRelic(itemInOffhand);
             player.addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 160, 1));
 
-            Utils.sendRelicMessage("&eRing of Suffering got destroyed upon usage and has punished you with weakness!", player);
+            Utils.sendRelicMessage("&e苦难之戒在使用后损坏了! 作为惩罚你获得了虚弱效果!", player);
         }
     }
 

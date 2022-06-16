@@ -27,7 +27,7 @@ public class MarriageRing extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eWhat a historic ring, hoping these would have a place in others hand, now where can I find piglins.", player);
+        Utils.sendRelicMessage("&e多么历史悠久的戒指啊! 我希望这枚戒指仍能发挥它最后的作用, 现在该去找猪灵了!", player);
     }
 
 }

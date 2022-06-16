@@ -13,6 +13,7 @@ import ne.fnfal113.relicsofcthonia.relics.implementation.NetherMaterials;
 import ne.fnfal113.relicsofcthonia.relics.implementation.OffHandRightClickHandler;
 import ne.fnfal113.relicsofcthonia.relics.implementation.Rarity;
 import ne.fnfal113.relicsofcthonia.utils.Utils;
+import net.guizhanss.relicsofcthonia.types.LoreType;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.ItemStack;
@@ -60,9 +61,9 @@ public abstract class AbstractRelic extends SlimefunItem implements OffHandRight
 
     public void updateRelicLore(){
        Utils.setLoreByDoubleValue(this.getItem(), this.getId(), "drop-chance", "%", "&e", "%");
-       Utils.addLoreByStringList(this.getItem(), this.getId(), "drops-on-material", "Drops on:", "&e", "‣ ", "");
-       Utils.addLoreByStringList(this.getItem(), this.getId(), "drops-on-mob", "Drops on:", "&e", "‣ ", "");
-       Utils.addLoreByStringList(this.getItem(), this.getId(), "piglin-barter-rewards", "Possible Piglin reward:", "&a", "‣ " + getPiglinRewardAmount() + " ", "");
+       Utils.addLoreByStringList(this.getItem(), this.getId(), "drops-on-material", "掉落于:", "&e", "‣ ", "", LoreType.MATERIAL);
+       Utils.addLoreByStringList(this.getItem(), this.getId(), "drops-on-mob", "掉落于:", "&e", "‣ ", "", LoreType.ENTITY_TYPE);
+       Utils.addLoreByStringList(this.getItem(), this.getId(), "piglin-barter-rewards", "猪灵交换物列表:", "&a", "‣ " + getPiglinRewardAmount() + "x ", "", LoreType.MATERIAL);
     }
 
     public void initializeSettings(double dropChance, int piglinRewardAmount, int defaultDropSize){

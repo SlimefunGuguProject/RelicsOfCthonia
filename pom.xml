@@ -45,10 +45,15 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <minimizeJar>true</minimizeJar>
                     <relocations>
                         <relocation>
                             <pattern>org.bstats</pattern>
                             <shadedPattern>ne.fnfal113.relicsofcthonia.bstats</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>net.guizhanss.guizhanlib</pattern>
+                            <shadedPattern>ne.fnfal113.relicsofcthonia.guizhanlib</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
@@ -60,6 +65,7 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+        <defaultGoal>clean package</defaultGoal>
     </build>
 
     <repositories>
@@ -110,6 +116,13 @@
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
             <version>3.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.guizhanss</groupId>
+            <artifactId>GuizhanLib</artifactId>
+            <version>0.9.7</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

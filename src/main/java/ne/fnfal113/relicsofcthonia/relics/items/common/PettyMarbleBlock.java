@@ -27,7 +27,7 @@ public class PettyMarbleBlock extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eThis marble block has no uses! you can trade it instead for something.", player);
+        Utils.sendRelicMessage("&e这块大理石已经没有任何用处! 你可以将它出售.", player);
     }
 
 }

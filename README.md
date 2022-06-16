@@ -1,36 +1,27 @@
-# :european_castle: Relics of Cthonia
-Discover and unearth the relics of cthonia, these relics are tradeable on piglins for which you can receive awesome rewards depending on the rarity of your relic! which are also configurable below, check [:gear: Configuration](#gear-configuration) 
+# :european_castle: Relics of Cthonia - 克苏尼亚遗物
 
-Some relics have their own uses or functions too! you just gotta discover it ingame.
+探索并发觉克苏尼亚的遗物。可以用这些遗物与猪灵交易，你会根据遗物稀有度获得不同的奖励。当然这是完全可以配置的，详见 [:gear: 配置](#gear-配置)。
 
-An entry for slimefun addon jam 2022 which started from june 3 to 13.
+某些遗物甚至还能使用，你需要在游戏中尝试它们的效果。
 
-## :sparkler: Lore
-In the middle earth, the lands of Cthonia where rich civilization exist since the dawn of aether has been brought down to its knees through centuries of war against the gods of oblivion. 
+该附属为2022年粘液科技附属竞赛参赛作品。
 
-Cthonia fell into the hands of the dark, it was succumbed slowly transforming the radiant lands to dire biome (nether) leaving a scattered waste lands with dark entities who were dammed during the war. As centuries past by, cthonian relics are widely scattered in the waste lands waiting to be unearthed from the ground and looted from dark mobs. 
+## :sparkler: 背景
 
-As an adventurer, you take part in the discovery of these ancient relics and pursue the fortune that lies beyond.
+在中土世界，克苏尼亚的土地上，自从以太诞生之时就存在着繁荣的文明。但经过数年与遗忘之神的交战，克苏尼亚陷落了。
 
-## :arrow_down: Download from build page with auto updates
-### [Download Official Jar](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main/)
-[![Build Status](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main/badge.svg)](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main)
+克苏尼亚陷入了黑暗，它似乎屈从于黑暗的淫威，将曾经光芒四射的下界区域转变成如今阴森恐怖的群落，留下零星的废墟与数不清的尸骨。  
+几个世纪过去了，克苏尼亚的遗物散落在废土中，等待人们挖掘出来。它们似乎还很受黑暗地区部分生物的欢迎。
 
-## 💫 Categories
-<div align="center">
-  <div style="display: flex;">
-    <img src="https://user-images.githubusercontent.com/88238718/173013545-486b5a78-c571-4c15-996f-79d52df1b31c.png" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173013559-d7cb01aa-48f9-413b-a0d7-499543892795.png" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173013556-7d33196c-e1d8-4dd6-ab4b-92f1c0afdc44.png" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173013550-77537837-420c-49c6-ae1a-5b6ce5479299.png" style="vertical-align: top;">
-    <img src="https://user-images.githubusercontent.com/88238718/173013553-20129439-717b-42bb-b9c6-8dec00c2b7d4.png" style="vertical-align: top;">
-    <br>
-    <br>
-    <p>There are 7 common, uncommon and rare relics while 6 relics for epic and legendary.</p>
-  </div> 
-</div>
+作为一名冒险家，你将参与发掘这些古老的遗物，并追求其中的财富。
 
-## :gem: Some relic samples by rarity
+## 💫 分类
+
+目前遗物共有5种稀有度。  
+
+其中，普通、罕见、稀有级分别有7个遗物，而史诗和传说级分别有6个遗物。
+
+## :gem: 一些遗物
 
 <div align="center">
   <div style="display: flex;">
@@ -42,14 +33,14 @@ As an adventurer, you take part in the discovery of these ancient relics and pur
   </div> 
 </div>
 
-## :gear: Configuration
-<div align="center">
-    <img src="https://user-images.githubusercontent.com/88238718/173017725-59cd0967-e558-4f87-91d8-5b8bf6ae4a72.png" width="350" height="450" style="vertical-align: top;">
-  <img src="https://user-images.githubusercontent.com/88238718/173021026-ef43ff23-eee9-434c-a3d5-0e874bd32919.png" width="350" height="450" style="vertical-align: top;">
-    <br>
-    <br>
-    <p>This plugin is high configurable in terms of drop rates, where do the relics drop (blocks or in mobs) and the amount of piglin rewards you receive from a successfull barter per each relic. You can add additional item drop rewards or where to drop relic in the fields or remove them at your own disposal. Item rewards support slimefun and vanilla items using the appropriate item ID. <br>You can also generate random config templates by deleting the relic-settings.yml file.</p>
-</div>
+## :gear: 配置
+
+你可以在`relic-settings.yml`文件中配置遗物。你可以配置遗物的：
+
+- 指定生物/方块的掉落率
+- 从哪些生物掉落
+- 从哪些方块掉落
+- 猪灵交换物
 
 ## :label: Credits
 Huge credits to the custom heads used in this addon which are all from https://minecraft-heads.com/custom-heads

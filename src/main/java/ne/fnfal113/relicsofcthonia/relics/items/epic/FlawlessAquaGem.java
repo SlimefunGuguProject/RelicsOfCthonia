@@ -27,7 +27,7 @@ public class FlawlessAquaGem extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eThis gem has no uses but for its value, trade it instead!", player);
+        Utils.sendRelicMessage("&e这种宝石并没有任何用途, 但因其价值不菲, 最好赶紧把它卖了!", player);
     }
 
 }

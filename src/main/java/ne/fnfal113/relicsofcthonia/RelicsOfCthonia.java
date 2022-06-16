@@ -1,13 +1,13 @@
 package ne.fnfal113.relicsofcthonia;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 import ne.fnfal113.relicsofcthonia.config.ConfigManager;
 import ne.fnfal113.relicsofcthonia.items.RelicsItemSetup;
 import ne.fnfal113.relicsofcthonia.listeners.MiningListener;
 import ne.fnfal113.relicsofcthonia.listeners.MobKillListener;
 import ne.fnfal113.relicsofcthonia.listeners.OffHandClickListener;
 import ne.fnfal113.relicsofcthonia.listeners.PiglinMainListener;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -30,9 +30,9 @@ public final class RelicsOfCthonia extends JavaPlugin implements SlimefunAddon {
         new Metrics(this, 15420);
 
         getLogger().info("************************************************************");
-        getLogger().info("*         Relics of Cthonia - Created by FN_FAL113         *");
-        getLogger().info("*               Slimefun Addon Jam 2022 Entry              *");
-        getLogger().info("*                     The Nether Theme                     *");
+        getLogger().info("               Relics of Cthonia - 克苏尼亚遗物               ");
+        getLogger().info("         作者: FN_FAL113  汉化: SlimefunGuguProject           ");
+        getLogger().info("                 2022粘液科技附属竞赛参赛作品                    ");
         getLogger().info("************************************************************");
 
         getConfig().options().copyDefaults();
@@ -42,8 +42,8 @@ public final class RelicsOfCthonia extends JavaPlugin implements SlimefunAddon {
 
         registerEvents();
 
-        if (getConfig().getBoolean("auto-update", true) && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "FN-FAL113/RelicsOfCthonia/main").start();
+        if (getConfig().getBoolean("auto-update", true) && getDescription().getVersion().startsWith("Build")) {
+            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "RelicsOfCthonia", "main", false, "zh-CN").start();
         }
 
     }
@@ -58,7 +58,7 @@ public final class RelicsOfCthonia extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onDisable() {
         getServer().getScheduler().cancelTasks(RelicsOfCthonia.getInstance());
-        getLogger().log(Level.INFO, "Successfully disabled any running task that exist");
+        getLogger().log(Level.INFO, "已取消所有任务");
     }
 
     @Nonnull
@@ -70,7 +70,7 @@ public final class RelicsOfCthonia extends JavaPlugin implements SlimefunAddon {
     @Nullable
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/FN-FAL113/RelicsOfCthonia/issues";
+        return "https://github.com/SlimefunGuguProject/RelicsOfCthonia/issues";
     }
 
     private static void setInstance(RelicsOfCthonia ins) {

@@ -27,7 +27,7 @@ public class CeruleanGem extends AbstractRelic {
 
     @Override
     public void onItemRightClick(PlayerInteractEvent event, Player player, ItemStack itemInOffhand) {
-        Utils.sendRelicMessage("&eI should trade this gem, might be a worth of fortune but who knows.", player);
+        Utils.sendRelicMessage("&e我应该出售这枚宝石, 可能会是一笔财富, 但谁知道呢.", player);
     }
 
 }
