@@ -15,6 +15,19 @@
 
 作为一名冒险家，你将参与发掘这些古老的遗物，并追求其中的财富。
 
+## :arrow_down: 下载
+
+点击这里下载 RelicsOfCthonia: [下载 RelicsOfCthonia](https://builds.guizhanss.net/SlimefunGuguProject/RelicsOfCthonia/main)
+
+<p align="center">
+  <a href="https://github.com/SlimefunGuguProject/RelicsOfCthonia/actions/workflows/maven.yml">
+    <img src="https://github.com/SlimefunGuguProject/RelicsOfCthonia/actions/workflows/maven.yml/badge.svg" alt="Java CI"/>
+  </a>
+  <a href="https://builds.guizhanss.net/SlimefunGuguProject/RelicsOfCthonia/main">
+    <img src="https://builds.guizhanss.net/f/SlimefunGuguProject/RelicsOfCthonia/main/badge.svg" alt="Build status"/>
+  </a>
+</p>
+
 ## 💫 分类
 
 目前遗物共有5种稀有度。  
