@@ -132,7 +132,7 @@ public class PiglinMainListener implements Listener {
 
         // we prevent slimefun from converting barter drops if the
         // piglin has the metadata during the barter
-        if(SlimefunItem.getByItem(itemStack) instanceof StrangeNetherGoo){
+        if(SlimefunItem.getByItem(itemStack) instanceof StrangeNetherGoo && !event.isCancelled()){
             event.setCancelled(true);
         }
     }
@@ -147,8 +147,7 @@ public class PiglinMainListener implements Listener {
 
         if(event.isCancelled()){
             // if canceled call necessary callbacks
-            removeBarterMaterial(event);
-            removePiglinMetadata(piglin);
+            clearTradeData(event, piglin);
             executeTradeMessage(event, "&cFailed trade! piglin is not allowed to trade in the current location!");
 
             return;
@@ -158,7 +157,7 @@ public class PiglinMainListener implements Listener {
 
         if(!sfItem.isPresent()){
             // if not present call necessary callbacks
-            removeBarterMaterial(event);
+            clearTradeData(event, piglin);
             executeTradeMessage(event, "&cFailed trade! the barter item you gave is not a cthonian relic.");
 
             return;
@@ -202,13 +201,18 @@ public class PiglinMainListener implements Listener {
                 piglin.getWorld().playSound(piglin.getLocation(), Sound.ENTITY_PIGLIN_ADMIRING_ITEM, 1.0F, 1.0F);
 
                 if(!haveCondition){
-                    executeTradeMessage(event, "&aSuccessful trade! The relic was obtained from sf give command!");
+                    executeTradeMessage(event, "&aRelic obtained from sf give command, successful trade!");
                 }
 
             } else {
                 removeBarterMaterial(event);
             }
         } // is sf item a relic
+    }
+
+    public void clearTradeData(PiglinBarterEvent event, Piglin piglin){
+        removeBarterMaterial(event);
+        removePiglinMetadata(piglin);
     }
 
     public void removePiglinMetadata(Piglin piglin){
