@@ -1015,65 +1015,60 @@ public class RelicItems {
             "COMMON_RELIC_VOIDER",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "895bd42f9a365bc7830bfd1a739ea7be79db431ca958175b226de4f33adac8d1")),
-            "&a普通遗物排除仪",
+            "&a普通遗物清除器",
             "",
-            "&a取消你在条件配额下",
-            "&a拾取的所有普通遗物",
+            "&a清除拾起的不满足指定条件",
+            "&a的所有普通遗物",
             "",
-            "&d右击设置条件",
-            "&d并定量配额"
+            "&d右键点击进行设置"
     );
 
     public static final SlimefunItemStack UNCOMMON_RELIC_VOIDER = new SlimefunItemStack(
             "UNCOMMON_RELIC_VOIDER",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "82dd52a1bd0733ae3321f4162b7972d94304c1585c3a62a40ebd6f06f0f2c4c")),
-            "&a罕见遗物排除仪",
+            "&a罕见遗物清除器",
             "",
-            "&a取消你在条件配额下",
-            "&a拾取的所有罕见遗物",
+            "&a清除拾起的不满足指定条件",
+            "&a的所有罕见遗物",
             "",
-            "&d右击设置条件",
-            "&d并定量配额"
+            "&d右键点击进行设置"
     );
 
     public static final SlimefunItemStack RARE_RELIC_VOIDER = new SlimefunItemStack(
             "RARE_RELIC_VOIDER",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "648901175e22e30f13d480a032e8aa5c5fbae4d7bbd86b9bd4f431d161fe9b38")),
-            "&a稀有遗物排除仪",
+            "&a稀有遗物清除器",
             "",
-            "&a取消你在条件配额下",
-            "&a拾取的所有罕见遗物",
+            "&a清除拾起的不满足指定条件",
+            "&a的所有稀有遗物",
             "",
-            "&d右击设置条件",
-            "&d并定量配额"
+            "&d右键点击进行设置"
     );
 
     public static final SlimefunItemStack EPIC_RELIC_VOIDER = new SlimefunItemStack(
             "EPIC_RELIC_VOIDER",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "7e05734818bb02867e73cf8fb003d3d68eaaf2a2b4a1dc2ce10fdea972c7a179")),
-            "&a史诗遗物排除仪",
+            "&a史诗遗物清除器",
             "",
-            "&a取消你在条件配额下",
-            "&a拾取的所有史诗遗物",
+            "&a清除拾起的不满足指定条件",
+            "&a的所有史诗遗物",
             "",
-            "&d右击设置条件",
-            "&d并定量配额"
+            "&d右键点击进行设置"
     );
 
     public static final SlimefunItemStack LEGENDARY_RELIC_VOIDER = new SlimefunItemStack(
             "LEGENDARY_RELIC_VOIDER",
             PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "a70f6c40cc7b56a5e701cfccd31c1435ababfc45eb33d815a5b41203f2115a0b")),
-            "&a传说遗物排除仪",
+            "&a传说遗物清除器",
             "",
-            "&a取消你在条件配额下",
-            "&a拾取的所有传说遗物",
+            "&a清除拾起的不满足指定条件",
+            "&a的所有传说遗物",
             "",
-            "&d右击设置条件",
-            "&d并定量配额"
+            "&d右键点击进行设置"
     );
 
     public static final SlimefunItemStack RELIC_DROP_TYPE = new SlimefunItemStack(

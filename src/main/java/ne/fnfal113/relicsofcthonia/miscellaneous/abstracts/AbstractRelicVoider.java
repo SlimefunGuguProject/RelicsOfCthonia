@@ -26,13 +26,13 @@ import org.bukkit.persistence.PersistentDataType;
 public class AbstractRelicVoider extends UnplaceableBlock {
 
     private static final CustomItemStack DECREMENT_CONDITION = new CustomItemStack(Material.RED_STAINED_GLASS_PANE,
-            "&c减少条件配额",
-            "&7点击减少 1 条件配额"
+            "&c减少阈值",
+            "&7点击减少阈值"
     );
 
     private static final CustomItemStack INCREMENT_CONDITION = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE,
-            "&c增加条件配额",
-            "&7点击增加 1 条件配额"
+            "&c增加阈值",
+            "&7点击增加阈值"
     );
 
     @Getter
