@@ -57,7 +57,7 @@ public class RelicItems {
             RELIC_MAIN_GROUP,
             new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
                     "cba77856d80dade55699544ddcd685964b0180823fe4ff270de7e5f58aecf3a5")),
-                    "&6Miscellaneous Items"));
+                    "&6其他物品"));
 
     public static final SlimefunItemStack COMMON_RELIC_CTHONIAN_PEARL = new SlimefunItemStack(
             "COMMON_RELIC_CTHONIAN_PEARL",

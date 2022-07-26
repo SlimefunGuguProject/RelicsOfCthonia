@@ -26,13 +26,13 @@ import org.bukkit.persistence.PersistentDataType;
 public class AbstractRelicVoider extends UnplaceableBlock {
 
     private static final CustomItemStack DECREMENT_CONDITION = new CustomItemStack(Material.RED_STAINED_GLASS_PANE,
-            "&cDecrement Condition Quota",
-            "&7Click to decrement the quota by 1"
+            "&c减少条件配额",
+            "&7点击减少 1 条件配额"
     );
 
     private static final CustomItemStack INCREMENT_CONDITION = new CustomItemStack(Material.GREEN_STAINED_GLASS_PANE,
-            "&cIncrement Condition Quota",
-            "&7Click to increment the quota by 1"
+            "&c增加条件配额",
+            "&7点击增加 1 条件配额"
     );
 
     @Getter
@@ -75,8 +75,8 @@ public class AbstractRelicVoider extends UnplaceableBlock {
         itemStack.setItemMeta(meta);
 
         inventory.setItem(4, new CustomItemStack(Material.PURPLE_STAINED_GLASS,
-                "&fVoids any " + getRarity().name() + " relic whose",
-                "&fcondition is below " + "&6&l" + finalCondition + "%"
+                "&f清空任何完整度低于 &6&l" + finalCondition + "%",
+                "&f的" + getRarity().getRarityName() + "遗物"
         ));
     }
 
@@ -94,8 +94,8 @@ public class AbstractRelicVoider extends UnplaceableBlock {
                 inventory.setItem(i, INCREMENT_CONDITION);
             } else if(i == 4) {
                 inventory.setItem(i, new CustomItemStack(Material.PURPLE_STAINED_GLASS,
-                        "&fVoids any " + getRarity().name() + " relic whose",
-                        "&fcondition is below " + "&6&l" + conditionQuota + "%"
+                    "&f清空任何完整度低于 &6&l" + conditionQuota + "%",
+                    "&f的" + getRarity().getRarityName() + "遗物"
                 ));
             } else {
                 inventory.setItem(i, ChestMenuUtils.getBackground());
@@ -112,7 +112,7 @@ public class AbstractRelicVoider extends UnplaceableBlock {
 
         if(pickedUpRelicCondition <= conditionQuota){
             if(isNotifEnabled()) {
-                Utils.sendRelicMessage("&6Successfully voided " + "&r" + pickedUpRelic.getItemStack().getItemMeta().getDisplayName(), event.getEntity());
+                Utils.sendRelicMessage("&6遗物清除器已清除 " + "&r" + pickedUpRelic.getItemStack().getItemMeta().getDisplayName(), event.getEntity());
             }
 
             pickedUpRelic.remove();

@@ -48,7 +48,7 @@ public class RelicPlaceBreakListener implements Listener {
                 String value = BlockStorage.getLocationInfo(clickedBlock.getLocation(), "relic_condition");
 
                 if(!Objects.equals(BlockStorage.getLocationInfo(clickedBlock.getLocation(), "owner"), player.getUniqueId().toString())){
-                    player.sendMessage(Utils.colorTranslator("&6Hey, you are not the owner of this relic!"));
+                    player.sendMessage(Utils.colorTranslator("&6你不是这件遗物的拥有者!"));
 
                     return;
                 }
@@ -110,7 +110,7 @@ public class RelicPlaceBreakListener implements Listener {
                 BlockStorage.clearBlockInfo(blockBroken);
                 blockBroken.setType(Material.AIR);
 
-                player.sendMessage(Utils.colorTranslator("&6You broke the relic! right click the relic instead next time to pick it up."));
+                player.sendMessage(Utils.colorTranslator("&6你破坏了一个遗物! 你应该使用右键来拿起遗物."));
             }
         });
 
