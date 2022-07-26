@@ -64,7 +64,7 @@ public class PiglinMainListener implements Listener {
         }
 
         if(piglin.hasMetadata("relic_trader")){
-            Utils.sendRelicMessage("&e猪灵正在进行以物换物!", player);
+            Utils.sendRelicMessage("&ePiglin is currently in trade!", player);
             event.setCancelled(true);
             return;
         }
@@ -132,7 +132,7 @@ public class PiglinMainListener implements Listener {
 
         // we prevent slimefun from converting barter drops if the
         // piglin has the metadata during the barter
-        if(SlimefunItem.getByItem(itemStack) instanceof StrangeNetherGoo){
+        if(SlimefunItem.getByItem(itemStack) instanceof StrangeNetherGoo && !event.isCancelled()){
             event.setCancelled(true);
         }
     }
@@ -147,8 +147,7 @@ public class PiglinMainListener implements Listener {
 
         if(event.isCancelled()){
             // if canceled call necessary callbacks
-            removeBarterMaterial(event);
-            removePiglinMetadata(piglin);
+            clearTradeData(event, piglin);
             executeTradeMessage(event, "&c交易失败! 猪灵无法在此处进行以物换物!");
 
             return;
@@ -158,7 +157,7 @@ public class PiglinMainListener implements Listener {
 
         if(!sfItem.isPresent()){
             // if not present call necessary callbacks
-            removeBarterMaterial(event);
+            clearTradeData(event, piglin);
             executeTradeMessage(event, "&c交易失败! 你提供的物品不是克苏尼亚遗物!");
 
             return;
@@ -209,6 +208,11 @@ public class PiglinMainListener implements Listener {
                 removeBarterMaterial(event);
             }
         } // is sf item a relic
+    }
+
+    public void clearTradeData(PiglinBarterEvent event, Piglin piglin){
+        removeBarterMaterial(event);
+        removePiglinMetadata(piglin);
     }
 
     public void removePiglinMetadata(Piglin piglin){

@@ -6,7 +6,7 @@
 
     <groupId>ne.fnfal113</groupId>
     <artifactId>RelicsOfCthonia</artifactId>
-    <version>Unofficial-1.0</version>
+    <version>Unofficial-1.2</version>
     <packaging>jar</packaging>
 
     <name>RelicsOfCthonia</name>
@@ -94,7 +94,7 @@
         <dependency>
             <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-31</version>
+            <version>RC-32</version>
             <scope>provided</scope>
         </dependency>
 
