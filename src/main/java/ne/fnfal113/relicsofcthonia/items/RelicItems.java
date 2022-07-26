@@ -49,8 +49,15 @@ public class RelicItems {
             new NamespacedKey(RelicsOfCthonia.getInstance(), "relic_items"),
             RELIC_MAIN_GROUP,
             new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
-                    "2d0bdf39b54f49692fb379b4eb04d1eb4a00e78ed3911ad3b63a7e5bf3176837")),
+                    "9af8daadcddb088a8ed8759ba02770d728214f07cdd93a630b8e7d3ca0373dc")),
                     "&6Legendary Relic"));
+
+    public static final SubItemGroup MISCELLANEOUS = new SubItemGroup(
+            new NamespacedKey(RelicsOfCthonia.getInstance(), "miscellaneous"),
+            RELIC_MAIN_GROUP,
+            new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+                    "cba77856d80dade55699544ddcd685964b0180823fe4ff270de7e5f58aecf3a5")),
+                    "&6Miscellaneous Items"));
 
     public static final SlimefunItemStack COMMON_RELIC_CTHONIAN_PEARL = new SlimefunItemStack(
             "COMMON_RELIC_CTHONIAN_PEARL",
@@ -1018,6 +1025,71 @@ public class RelicItems {
             "&eoffhand to check for uses",
             "",
             "&6Φ Relics of Cthonia Φ"
+    );
+
+    public static final SlimefunItemStack COMMON_RELIC_VOIDER = new SlimefunItemStack(
+            "COMMON_RELIC_VOIDER",
+            PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+                    "895bd42f9a365bc7830bfd1a739ea7be79db431ca958175b226de4f33adac8d1")),
+            "&aCommon Relic Voider",
+            "",
+            "&aVoids any common relics you pickup",
+            "&awhich are under the condition quota",
+            "",
+            "&dRight click to set a condition",
+            "&dquota for the voider"
+    );
+
+    public static final SlimefunItemStack UNCOMMON_RELIC_VOIDER = new SlimefunItemStack(
+            "UNCOMMON_RELIC_VOIDER",
+            PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+                    "82dd52a1bd0733ae3321f4162b7972d94304c1585c3a62a40ebd6f06f0f2c4c")),
+            "&7Uncommon Relic Voider",
+            "",
+            "&7Voids any uncommon relics you pickup",
+            "&7which are under the condition quota",
+            "",
+            "&dRight click to set a condition",
+            "&dquota for the voider"
+    );
+
+    public static final SlimefunItemStack RARE_RELIC_VOIDER = new SlimefunItemStack(
+            "RARE_RELIC_VOIDER",
+            PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+                    "648901175e22e30f13d480a032e8aa5c5fbae4d7bbd86b9bd4f431d161fe9b38")),
+            "&9Rare Relic Voider",
+            "",
+            "&9Voids any rare relics you pickup",
+            "&9which are under the condition quota",
+            "",
+            "&dRight click to set a condition",
+            "&dquota for the voider"
+    );
+
+    public static final SlimefunItemStack EPIC_RELIC_VOIDER = new SlimefunItemStack(
+            "EPIC_RELIC_VOIDER",
+            PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+                    "7e05734818bb02867e73cf8fb003d3d68eaaf2a2b4a1dc2ce10fdea972c7a179")),
+            "&dEpic Relic Voider",
+            "",
+            "&dVoids any epic relics you pickup",
+            "&dwhich are under the condition quota",
+            "",
+            "&dRight click to set a condition",
+            "&dquota for the voider"
+    );
+
+    public static final SlimefunItemStack LEGENDARY_RELIC_VOIDER = new SlimefunItemStack(
+            "LEGENDARY_RELIC_VOIDER",
+            PlayerHead.getItemStack(PlayerSkin.fromHashCode(
+                    "a70f6c40cc7b56a5e701cfccd31c1435ababfc45eb33d815a5b41203f2115a0b")),
+            "&6Legendary Relic Voider",
+            "",
+            "&6Voids any legendary relics you pickup",
+            "&6which are under the condition quota",
+            "",
+            "&dRight click to set a condition",
+            "&dquota for the voider"
     );
 
     public static final SlimefunItemStack RELIC_DROP_TYPE = new SlimefunItemStack(
