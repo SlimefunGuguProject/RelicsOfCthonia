@@ -49,6 +49,7 @@ public class RelicPlaceBreakListener implements Listener {
 
                 if(!Objects.equals(BlockStorage.getLocationInfo(clickedBlock.getLocation(), "owner"), player.getUniqueId().toString())){
                     player.sendMessage(Utils.colorTranslator("&6Hey, you are not the owner of this relic!"));
+
                     return;
                 }
 
@@ -58,11 +59,12 @@ public class RelicPlaceBreakListener implements Listener {
                 clickedBlock.setType(Material.AIR);
 
                 if(player.getInventory().firstEmpty() == -1){
-                    clickedBlock.getWorld().dropItemNaturally(clickedBlock.getLocation(), itemStack.clone());
+                    clickedBlock.getWorld().dropItemNaturally(clickedBlock.getLocation(), itemStack);
+
                     return;
                 }
 
-                player.getInventory().addItem(itemStack.clone());
+                player.getInventory().addItem(itemStack);
             }
         });
 
