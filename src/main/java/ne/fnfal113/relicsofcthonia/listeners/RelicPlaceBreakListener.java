@@ -6,22 +6,20 @@ import ne.fnfal113.relicsofcthonia.relics.abstracts.AbstractRelic;
 import ne.fnfal113.relicsofcthonia.utils.Utils;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 
-import java.util.Objects;
 import java.util.Optional;
 
 public class RelicPlaceBreakListener implements Listener {
 
-    @EventHandler
+    // Due to synchronization bugs with block storage when spam clicking
+    // it leads to bugs and unforeseen consequences. Picking up relics is
+    // temporarily disabled until block storage rewrite
+    /*@EventHandler
     public void onRelicClick(PlayerInteractEvent event){
         if(event.isCancelled()){
             return;
@@ -42,8 +40,6 @@ public class RelicPlaceBreakListener implements Listener {
 
         relic.ifPresent(item -> {
             if(item instanceof AbstractRelic){
-                event.setCancelled(true);
-
                 AbstractRelic abstractRelic = (AbstractRelic) item;
                 String value = BlockStorage.getLocationInfo(clickedBlock.getLocation(), "relic_condition");
 
@@ -55,8 +51,8 @@ public class RelicPlaceBreakListener implements Listener {
 
                 ItemStack itemStack = abstractRelic.setRelicCondition(false, Integer.parseInt(value));
 
-                BlockStorage.clearBlockInfo(clickedBlock);
                 clickedBlock.setType(Material.AIR);
+                BlockStorage.clearBlockInfo(clickedBlock);
 
                 if(player.getInventory().firstEmpty() == -1){
                     clickedBlock.getWorld().dropItemNaturally(clickedBlock.getLocation(), itemStack);
@@ -65,10 +61,12 @@ public class RelicPlaceBreakListener implements Listener {
                 }
 
                 player.getInventory().addItem(itemStack);
+
+                event.setCancelled(true);
             }
         });
 
-    }
+    }*/
 
     @EventHandler
     public void onRelicPlace(BlockPlaceEvent event){
@@ -76,18 +74,13 @@ public class RelicPlaceBreakListener implements Listener {
             return;
         }
 
-        Block blockPlaced = event.getBlockPlaced();
         ItemStack itemInHand = event.getItemInHand();
 
         Optional<SlimefunItem> relic = Optional.ofNullable(SlimefunItem.getByItem(itemInHand));
 
         relic.ifPresent(item -> {
             if(item instanceof AbstractRelic){
-                AbstractRelic abstractRelic = (AbstractRelic) item;
-                String value = String.valueOf(abstractRelic.getRelicCondition(itemInHand));
-
-                BlockStorage.addBlockInfo(blockPlaced, "relic_condition", value);
-                BlockStorage.addBlockInfo(blockPlaced, "owner", event.getPlayer().getUniqueId().toString());
+                Utils.sendRelicMessage("You placed a relic, it will not drop anything once broken!", event.getPlayer());
             }
         });
 
@@ -100,17 +93,16 @@ public class RelicPlaceBreakListener implements Listener {
         }
 
         Block blockBroken = event.getBlock();
-        Player player = event.getPlayer();
 
         Optional<SlimefunItem> relic = Optional.ofNullable(BlockStorage.check(blockBroken));
 
         relic.ifPresent(item -> {
             if(item instanceof AbstractRelic){
                 event.setCancelled(true);
-                BlockStorage.clearBlockInfo(blockBroken);
-                blockBroken.setType(Material.AIR);
 
-                player.sendMessage(Utils.colorTranslator("&6You broke the relic! right click the relic instead next time to pick it up."));
+                BlockStorage.clearBlockInfo(blockBroken);
+
+                blockBroken.setType(Material.AIR);
             }
         });
 
