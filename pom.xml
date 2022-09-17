@@ -6,7 +6,7 @@
 
     <groupId>ne.fnfal113</groupId>
     <artifactId>RelicsOfCthonia</artifactId>
-    <version>Unofficial-1.3</version>
+    <version>Unofficial-1.4</version>
     <packaging>jar</packaging>
 
     <name>RelicsOfCthonia</name>
@@ -50,10 +50,6 @@
                         <relocation>
                             <pattern>org.bstats</pattern>
                             <shadedPattern>ne.fnfal113.relicsofcthonia.bstats</shadedPattern>
-                        </relocation>
-                        <relocation>
-                            <pattern>net.guizhanss.guizhanlib</pattern>
-                            <shadedPattern>ne.fnfal113.relicsofcthonia.guizhanlib</shadedPattern>
                         </relocation>
                     </relocations>
                 </configuration>
@@ -121,9 +117,9 @@
 
         <dependency>
             <groupId>net.guizhanss</groupId>
-            <artifactId>GuizhanLib</artifactId>
-            <version>0.9.9</version>
-            <scope>compile</scope>
+            <artifactId>GuizhanLibPlugin</artifactId>
+            <version>1.0.3</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
