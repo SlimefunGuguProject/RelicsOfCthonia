@@ -62,6 +62,7 @@
             </resource>
         </resources>
         <defaultGoal>clean package</defaultGoal>
+        <finalName>${project.name}-${project.version}</finalName>
     </build>
 
     <repositories>
