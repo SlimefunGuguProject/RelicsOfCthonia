@@ -1,4 +1,12 @@
 # :european_castle: Relics of Cthonia
+
+<div align="center">
+
+![bStats Servers](https://img.shields.io/bstats/servers/15420)
+![bStats Players](https://img.shields.io/bstats/players/15420)
+
+</div>
+
 Discover and unearth the relics of cthonia, these relics are tradeable on piglins for which you can receive awesome rewards depending on the rarity of your relic! which are also configurable below, check [:gear: Configuration](#gear-configuration) 
 
 Some relics have their own uses or functions too! you just gotta discover it ingame.
