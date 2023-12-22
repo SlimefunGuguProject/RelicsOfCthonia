@@ -21,8 +21,8 @@ Cthonia fell into the hands of the dark, it was succumbed slowly transforming th
 As an adventurer, you take part in the discovery of these ancient relics and pursue the fortune that lies beyond.
 
 ## :arrow_down: Download from build page with auto updates
-### [Download Official Jar](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main/)
-[![Build Status](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main/badge.svg)](https://thebusybiscuit.github.io/builds/FN-FAL113/RelicsOfCthonia/main)
+### [Download Official Jar](https://blob.build/project/RelicsOfCthonia)
+
 
 ## 💫 Categories
 <div align="center">
@@ -59,7 +59,15 @@ As an adventurer, you take part in the discovery of these ancient relics and pur
     <p>This plugin is high configurable in terms of drop rates, where do the relics drop (blocks or in mobs) and the amount of piglin rewards you receive from a successfull barter per each relic. You can add additional item drop rewards or where to drop relic in the fields or remove them at your own disposal. Item rewards support slimefun and vanilla items using the appropriate item ID. <br>You can also generate random config templates by deleting the relic-settings.yml file.</p>
 </div>
 
+## 💖 Support the Project/Dev
+I develop stuff for free with dedication and hard work. Sharing this project with fellow minecraft gamers/server owners or giving it a star is a huge sign of appreciation!</br>
+a donation button (currently using parent's paypal due to my pending account requirements).<br/>
+<a href="https://www.paypal.com/paypalme/ameliaOrbeta" target=_blank>
+  <img src="https://raw.githubusercontent.com/stefan-niedermann/paypal-donate-button/master/paypal-donate-button.png" alt="Donate with PayPal" width="40%" />
+</a>
+
 ## :label: Credits
-Huge credits to the custom heads used in this addon which are all from https://minecraft-heads.com/custom-heads
+Minecraft-Heads for the head textures used by the addon:<br>
+[Visit MC Heads Site](https://minecraft-heads.com/)
 
 
