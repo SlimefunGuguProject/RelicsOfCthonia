@@ -1,5 +1,6 @@
 package ne.fnfal113.relicsofcthonia.listeners;
 
+import io.github.thebusybiscuit.slimefun4.api.events.BlockPlacerPlaceEvent;
 import lombok.Getter;
 import ne.fnfal113.relicsofcthonia.RelicsOfCthonia;
 import ne.fnfal113.relicsofcthonia.relics.abstracts.AbstractRelic;
@@ -92,15 +93,25 @@ public class MiningListener implements Listener {
 
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent event){
-        if(event.isCancelled()){
-            return;
+        if(!event.isCancelled()){
+            handlePlacedBlock(event.getBlockPlaced());
         }
+    }
 
+    @EventHandler
+    public void onBlockPlacerPlaced(BlockPlacerPlaceEvent event) {
+        if(!event.isCancelled()){
+            handlePlacedBlock(event.getBlock());
+        }
+    }
+
+
+    public void handlePlacedBlock(Block block) {
         /*
          * Prevent players from block place farming any relics
          * This will be detected above in the block break event
          */
-        event.getBlockPlaced().setMetadata("placed_block", new FixedMetadataValue(RelicsOfCthonia.getInstance(), "placed"));
+        block.setMetadata("placed_block", new FixedMetadataValue(RelicsOfCthonia.getInstance(), "placed"));
     }
 
 }
