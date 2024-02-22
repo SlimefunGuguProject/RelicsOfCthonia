@@ -41,7 +41,7 @@ public class MiningListener implements Listener {
         Material blockBrokeType = block.getType();
 
         // only naturally generated blocks are accepted to prevent place and break farming
-        if(block.hasMetadata("placed_block")){
+        if(block.hasMetadata("placed_block")) {
             block.removeMetadata("placed_block", RelicsOfCthonia.getInstance());
 
             return;
@@ -52,7 +52,7 @@ public class MiningListener implements Listener {
         ThreadLocalRandom currentRandomThread = ThreadLocalRandom.current();
 
         Utils.createAsyncTask(asyncTask -> {
-           Iterator<Map.Entry<AbstractRelic, List<Material>>> dropIterator =  getWhereToDropMaterialMap().entrySet().iterator(); 
+           Iterator<Map.Entry<AbstractRelic, List<Material>>> dropIterator = getWhereToDropMaterialMap().entrySet().iterator(); 
            
             while (dropIterator.hasNext()) {
                 Map.Entry<AbstractRelic, List<Material>> pair = dropIterator.next();
@@ -92,15 +92,15 @@ public class MiningListener implements Listener {
     }
 
     @EventHandler
-    public void onBlockPlace(BlockPlaceEvent event){
-        if(!event.isCancelled()){
+    public void onBlockPlace(BlockPlaceEvent event) {
+        if(!event.isCancelled()) {
             handlePlacedBlock(event.getBlockPlaced());
         }
     }
 
     @EventHandler
     public void onBlockPlacerPlaced(BlockPlacerPlaceEvent event) {
-        if(!event.isCancelled()){
+        if(!event.isCancelled()) {
             handlePlacedBlock(event.getBlock());
         }
     }

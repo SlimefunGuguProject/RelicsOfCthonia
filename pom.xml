@@ -6,7 +6,7 @@
 
     <groupId>ne.fnfal113</groupId>
     <artifactId>RelicsOfCthonia</artifactId>
-    <version>Unofficial-1.8.1</version>
+    <version>Unofficial-1.8.2</version>
     <packaging>jar</packaging>
 
     <name>RelicsOfCthonia</name>
@@ -119,14 +119,14 @@
         <dependency>
             <groupId>com.github.baked-libs.dough</groupId>
             <artifactId>dough-updater</artifactId>
-            <version>c4231a4d1a</version>
+            <version>fcdbd45aa0</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>com.github.baked-libs.dough</groupId>
             <artifactId>dough-common</artifactId>
-            <version>c4231a4d1a</version>
+            <version>fcdbd45aa0</version>
             <scope>compile</scope>
         </dependency>
 
