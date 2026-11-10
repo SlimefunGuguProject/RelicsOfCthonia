@@ -17,11 +17,7 @@
 
 ## :arrow_down: 下载
 
-<p align="center">
-  <a href="https://builds.guizhanss.net/SlimefunGuguProject/RelicsOfCthonia/main">
-    <img src="https://builds.guizhanss.net/f/SlimefunGuguProject/RelicsOfCthonia/main/badge.svg" alt="Build status"/>
-  </a>
-</p>
+[下载 RelicsOfCthonia](https://resources.guizhanss.com/plugin/RelicsOfCthonia)
 
 ## 💫 分类
 
@@ -52,5 +48,3 @@
 
 ## :label: Credits
 Huge credits to the custom heads used in this addon which are all from https://minecraft-heads.com/custom-heads
-
-
